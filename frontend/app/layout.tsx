@@ -8,8 +8,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "e-commerce",
-  description: "Welcome to the e-commerce store",
+  title: "FlavorWaves",
+  description: "Welcome to FlavorWaves e-commerce",
 };
 
 export default function RootLayout({
@@ -20,15 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.className} antialiased`}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

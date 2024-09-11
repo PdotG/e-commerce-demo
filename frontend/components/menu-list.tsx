@@ -68,9 +68,9 @@ const MenuList = () => {
                       FlavorWaves
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      We are a group of artisans obsessed with sauces that
-                      creates modern sauces for creative people. Discover unique
-                      flavors and elevate your culinary creations.
+                      We are a group of obsessed artisans that creates modern
+                      sauces for creative people. Discover unique flavors and
+                      elevate your culinary creations.
                     </p>
                   </a>
                 </NavigationMenuLink>
