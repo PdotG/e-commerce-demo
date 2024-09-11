@@ -5,14 +5,12 @@ export function useGetFeaturedProducts() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  console.log("El url es: " + url);
+
   useEffect(() => {
     (async () => {
       try {
         const res = await fetch(url);
-        console.log("El res es: " +res);
         const json = await res.json();
-        console.log("El json es: " + json);
         setResult(json.data);
         setLoading(false);
       } catch (error: any) {
