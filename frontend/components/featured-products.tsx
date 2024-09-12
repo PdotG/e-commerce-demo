@@ -42,8 +42,8 @@ const FeaturedProducts = () => {
                           alt="Image featured"
                           className="object-fit:contain w-full h-48"
                         />
-                        <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100">
-                          <div className="flex justify-center gap-x-6 items-center">
+                        <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
+                          <div className="flex justify-center gap-x-6">
                             <IconButton
                               onClick={() => router.push(`product/${slug}`)}
                               icon={<Expand size={20} />}
