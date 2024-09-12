@@ -1,7 +1,13 @@
 "use client";
 import { useGetFeaturedProducts } from "@/api/useGetFeaturedProducts";
 import { ResponseType } from "@/types/response";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 import SkeletonSchema from "./skeletonSchema";
 import { ProductType } from "@/types/product";
 import { Card, CardContent } from "./ui/card";
@@ -37,14 +43,14 @@ const FeaturedProducts = () => {
                           className="object-fit:contain w-full h-48"
                         />
                         <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100"></div>
-                        <div className="flex justify-center gap-x-6">
+                        <div className="flex justify-center gap-x-6 items-center">
                           <IconButton
                             onClick={() => router.push(`product/${slug}`)}
                             icon={<Expand size={20} />}
                             className="text-gray-600"
                           />{" "}
                           <IconButton
-                            onClick={() => console.log("Add item")}
+                            onClick={() => alert("ADD TO CART!")}
                             icon={<ShoppingCart size={20} />}
                             className="text-gray-600"
                           />
@@ -67,6 +73,8 @@ const FeaturedProducts = () => {
               );
             })}
         </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext className="hidden sm:flex" />
       </Carousel>
     </div>
   );
