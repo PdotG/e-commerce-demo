@@ -27,7 +27,7 @@ const FeaturedProducts = () => {
           {result != null &&
             result.map((product: ProductType) => {
               const { attributes, id } = product;
-              const { slug, images, productName } = attributes;
+              const { slug, images, productName, spiciness } = attributes;
 
               return (
                 <CarouselItem
@@ -42,18 +42,19 @@ const FeaturedProducts = () => {
                           alt="Image featured"
                           className="object-fit:contain w-full h-48"
                         />
-                        <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100"></div>
-                        <div className="flex justify-center gap-x-6 items-center">
-                          <IconButton
-                            onClick={() => router.push(`product/${slug}`)}
-                            icon={<Expand size={20} />}
-                            className="text-gray-600"
-                          />{" "}
-                          <IconButton
-                            onClick={() => alert("ADD TO CART!")}
-                            icon={<ShoppingCart size={20} />}
-                            className="text-gray-600"
-                          />
+                        <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100">
+                          <div className="flex justify-center gap-x-6 items-center">
+                            <IconButton
+                              onClick={() => router.push(`product/${slug}`)}
+                              icon={<Expand size={20} />}
+                              className="text-gray-600"
+                            />{" "}
+                            <IconButton
+                              onClick={() => alert("ADD TO CART!")}
+                              icon={<ShoppingCart size={20} />}
+                              className="text-gray-600"
+                            />
+                          </div>
                         </div>
                       </CardContent>
                       <div className="flex justify-between gap-4 px-8">
@@ -63,7 +64,7 @@ const FeaturedProducts = () => {
                             Prueba
                           </p>
                           <p className="px-2 py-1 text-white bg-red-700 rounded-full dark:bg-red-400 dark:text-black w-fit">
-                            Picante
+                            {spiciness}
                           </p>
                         </div>
                       </div>
