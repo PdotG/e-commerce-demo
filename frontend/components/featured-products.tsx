@@ -61,7 +61,7 @@ const FeaturedProducts = () => {
                         <h3 className="text-lg font-bold">{productName}</h3>
                         <div className="flex items-center justify-between gap-3">
                           <p className="px-2 py-1 text-white bg-red-700 rounded-full dark:bg-red-400 dark:text-black w-fit">
-                            Spiciness: {spiciness}
+                            {spiciness}
                           </p>
                         </div>
                       </div>
